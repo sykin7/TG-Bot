@@ -5,6 +5,9 @@ services:
     container_name: tg_bot_ultimate
     env_file:
       - ./config/config.env
+    volumes:
+      - ./temp:/app/temp
+      - ./downloads:/app/downloads
     restart: always
   redis:
     image: redis:7-alpine
