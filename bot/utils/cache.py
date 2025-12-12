@@ -1,5 +1,4 @@
 import aioredis, os
-import asyncio
 
 REDIS_URL = os.environ.get("REDIS_URL")
 redis = None
