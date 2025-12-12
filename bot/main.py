@@ -7,6 +7,9 @@ from bot.handlers.file import handle_file
 from bot.scheduler.tasks import start_scheduler
 from dotenv import load_dotenv
 
+os.makedirs("temp", exist_ok=True)
+os.makedirs("downloads", exist_ok=True)
+
 load_dotenv('../config/config.env')
 BOT_TOKEN = os.environ.get("BOT_TOKEN")
 app = ApplicationBuilder().token(BOT_TOKEN).build()
