@@ -1,0 +1,8 @@
+version: '3.9'
+services:
+  tg_bot:
+    build: .
+    container_name: tg_bot_full
+    env_file:
+      - ./config/config.env
+    restart: always
