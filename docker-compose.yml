@@ -2,7 +2,11 @@ version: '3.9'
 services:
   tg_bot:
     build: .
-    container_name: tg_bot_full
+    container_name: tg_bot_ultimate
     env_file:
       - ./config/config.env
+    restart: always
+  redis:
+    image: redis:7-alpine
+    container_name: tg_bot_redis
     restart: always
